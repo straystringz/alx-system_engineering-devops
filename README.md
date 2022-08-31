@@ -1,2 +1,2 @@
-#!/bin/bias
+#!/bin/bash
 pwd
