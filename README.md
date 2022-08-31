@@ -1,2 +1,1 @@
-#!/bin/bash
-pwd
+NOT EMPTY
