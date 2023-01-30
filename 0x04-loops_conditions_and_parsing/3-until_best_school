@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Bash script using Until
+
+Choco="Best School"
+i=10
+
+until [ $i == 0 ]
+do
+	echo "$Choco"
+	((i--))
+done
