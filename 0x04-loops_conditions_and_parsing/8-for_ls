@@ -14,7 +14,7 @@
 
 for text in *-*; 
 do
-	if [ -f "$text" ] && [ ! -L "$text" ] && [ ! -h "$text" ] && [ ! -d "$text" ]; 
+	if [ -f "$text" ];
 then
 		result="${text##*-}"
 		echo "$result"
