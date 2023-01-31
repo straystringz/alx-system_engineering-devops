@@ -11,9 +11,12 @@
 #    Do not display hidden files
 
 
-files=$(ls -1 | grep -v "^\.")
-for text in $files; 
+
+for text in *-*; 
 do
-	result="${text##*-}"
-	echo "$result"
+	if [ -f "$text" ] && [ ! -L "$text" ] && [ ! -h "$text" ] && [ ! -d "$text" ]; 
+then
+		result="${text##*-}"
+		echo "$result"
+	fi
 done
