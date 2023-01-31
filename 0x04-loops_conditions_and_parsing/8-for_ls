@@ -12,7 +12,7 @@
 
 
 
-for text in *-*; 
+for text in *; 
 do
 	if [ -f "$text" ];
 then
