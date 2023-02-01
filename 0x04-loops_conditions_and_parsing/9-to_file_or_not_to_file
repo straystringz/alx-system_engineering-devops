@@ -14,7 +14,7 @@
 #        	if the file is not a regular file: (nothing) 
 
 
-if [ -e "school" ];
+if [ -f "school" ];
 then
 	if [ -d "school" ]; then
 		echo "school exists but it’s a directory"
