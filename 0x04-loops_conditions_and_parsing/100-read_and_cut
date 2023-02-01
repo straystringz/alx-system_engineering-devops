@@ -2,17 +2,15 @@
 # A Bash script that displays the content of the file /etc/passwd.
 
 # Your script should only display:
-
 #    username
 #    user id
 #    Home directory path for the user
-
 # Requirements:
-
 #    You must use the while loop (for and until are forbidden)
 
 
-while read line;do
+while read line;
+do
 	username=$(echo "$line" | cut -d: -f1)
 	userid=$(echo "$line" | cut -d: -f3)
 	home_dir=$(echo "$line" | cut -d: -f6)
