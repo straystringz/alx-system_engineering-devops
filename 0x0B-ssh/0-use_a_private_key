@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#connects 4.173.86.44 with key in /root/.ssh/school
+
+ssh -i /root/.ssh/school ubuntu@54.173.86.44 

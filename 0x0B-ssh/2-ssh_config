@@ -1,0 +1,6 @@
+#RSA 2-ssh_config
+
+Host 54.173.86.44
+    User ubuntu
+    IdentityFile root/.ssh/school
+    PasswordAuthentication no
