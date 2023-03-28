@@ -1,5 +1,5 @@
 # Setting up my client config_file
-import stdlib
+include stdlib
 
 file_line { 'Turn off passwd auth':
   ensure  => present,
