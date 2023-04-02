@@ -6,6 +6,8 @@ sudo apt-get install -y nginx
 # Configure Nginx to listen on port 80
 sudo sed -i 's/.*listen\s\+80.*/listen 80;/g' /etc/nginx/sites-available/default
 
+sudo ufw allow "Nginx HTTP"
+
 # Restart Nginx
 sudo killall -s HUP nginx
 
