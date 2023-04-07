@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install nginx -y
 
 # Create a backup of the default Nginx configuration file before modifying it.
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+#sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 
 # Create a simple web page with "Hello World" content in the index.html file.
 echo "Hello World!" | sudo tee /var/www/html/index.html
