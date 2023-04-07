@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Install and configure HAProxy.
+# Step 1: Install the load balancer.
+
+# Update the package list and install HAProxy.
+sudo apt-get update
+sudo apt-get install haproxy -y
+
+# Configure the load balancer by adding the frontend and backend settings to the haproxy.cfg file.
+sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null <<EOT
+frontend myfrontend
+        bind *:80
+        default_backend myservers
+backend myservers
+        balance roundrobin
+        server web-01 54.173.86.44:80 check
+        server web-02 100.25.14.32:80 check
+EOT
+
+# Start the HAProxy service.
+sudo /etc/init.d/haproxy start
+
+# Set HAProxy to start on boot.
+sudo update-rc.d haproxy defaults
+
+# Reload the HAProxy configuration.
+sudo /etc/init.d/haproxy reload
