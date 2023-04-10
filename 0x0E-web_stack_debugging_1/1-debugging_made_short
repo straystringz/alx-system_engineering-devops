@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A short script that  configures NginX to listen to 80
+sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+PID=$(cat /var/run/nginx.pid)
+kill -9 "$PID"
