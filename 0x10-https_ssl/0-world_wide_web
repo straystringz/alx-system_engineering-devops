@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Define a function that displays information about a subdomain.
 config_info () {
     # Use the `dig` command to query the DNS server for the given subdomain,
