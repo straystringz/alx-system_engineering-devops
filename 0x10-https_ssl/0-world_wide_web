@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Define a function that displays information about a subdomain.
+config_info () {
+    # Use the `dig` command to query the DNS server for the given subdomain,
+    # and pipe the output to `grep` to find the "ANSWER SECTION" line.
+    # Then use `awk` to extract the subdomain name, record type, and IP address.
+    echo "$(dig "$2.$1" | grep -A1 'ANSWER SECTION:' | awk '{split($1,a,"."); print "The subdomain " a[1] " is a " $4 " record and points to " $5}')" | tail -1
+}
+
+# Check how many command line arguments were passed in.
+if [ "$#" -eq 1 ]
+then
+    # If only one argument was passed in, assume that the user wants to display
+    # information about the standard subdomains `www`, `lb-01`, `web-01`, and `web-02`.
+    config_info "$1" "www"
+    config_info "$1" "lb-01"
+    config_info "$1" "web-01"
+    config_info "$1" "web-02"
+elif [ "$#" -eq 2 ]
+then
+    # If two arguments were passed in, assume that the user wants to display
+    # information about a specific subdomain.
+    config_info "$1" "$2"
+fi
+ 
