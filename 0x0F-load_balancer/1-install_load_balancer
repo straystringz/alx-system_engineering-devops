@@ -13,8 +13,8 @@ frontend myfrontend
         default_backend myservers
 backend myservers
         balance roundrobin
-        server web-01 54.173.86.44:80 check
-        server web-02 100.25.14.32:80 check
+        server web-01 34.224.3.157:80 check
+        server web-02 54.210.134.30:80 check
 EOT
 
 # Start the HAProxy service.
