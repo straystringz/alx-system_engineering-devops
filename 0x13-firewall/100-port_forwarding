@@ -10,7 +10,7 @@
 
 # nat Table rules
 *nat
-:POSTROUTING ACCEPT [0:0]
+:PREROUTING ACCEPT [0:0]
 # Forward traffic to port 80
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
 # don't delete the 'COMMIT' line or these nat table rules won't be processed
