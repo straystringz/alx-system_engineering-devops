@@ -2,10 +2,9 @@
 
 """This module handles the fetching of an employee's
 TODO list progress and stores the data in a json file
+Exports to-do list information of all employees to JSON format.
 """
 
-#!/usr/bin/python3
-"""Exports to-do list information of all employees to JSON format."""
 import json
 import requests
 
