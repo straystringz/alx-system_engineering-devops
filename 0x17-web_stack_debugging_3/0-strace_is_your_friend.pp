@@ -1,4 +1,4 @@
-# Using strace to find out the cause of the Apache error code
+# Fixing the php_rout error
  $php_rout = '/var/www/html/wp-settings.php'
 
   exec { 'replace_line':
