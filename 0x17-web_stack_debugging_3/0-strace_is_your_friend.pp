@@ -1,4 +1,4 @@
-# Fixing the php_rout error
+# Fixing the php error
  $php_rout = '/var/www/html/wp-settings.php'
 
   exec { 'replace_line':
